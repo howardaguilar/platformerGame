@@ -31,6 +31,6 @@ public class Display : MonoBehaviour
     public void updateCoin()
     {
         coinCount++;
-        coins.text = coinCount.ToString();
+        coins.text = "COINS X " + coinCount.ToString();
     }
 }
