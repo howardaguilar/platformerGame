@@ -207,6 +207,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveAmplify: 1
   amplify: 2
+  distToGround: 0.785
+  jumpForce: 5
+  isGrounded: 0
+  message: {fileID: 0}
 --- !u!54 &152376136
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -221,7 +225,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!136 &152376137
 CapsuleCollider:
@@ -233,10 +237,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.17898317
-  m_Height: 1.5748959
+  m_Radius: 0.04205225
+  m_Height: 0.20135689
   m_Direction: 1
-  m_Center: {x: -5.974997e-18, y: 0.77148724, z: -0.008232951}
+  m_Center: {x: 1.0948621e-16, y: 1.4582567, z: -0.023545586}
 --- !u!1 &261674531
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,7 +275,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -199.8, y: 206.4}
+  m_AnchoredPosition: {x: -1, y: 96.5}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &261674533
@@ -424,7 +428,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 65, y: 226.1}
+  m_AnchoredPosition: {x: 170.7, y: 95.9}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &301640822
@@ -579,6 +583,8 @@ MonoBehaviour:
   Brick: {fileID: 4384890098338158190, guid: fdd4c6677a336244cb9ffe412068053f, type: 3}
   QuestionBox: {fileID: 4384890098338158190, guid: 4d0d398bbd91a6946857665d0c11766e, type: 3}
   Stone: {fileID: 4384890098338158190, guid: 4c0ea77a4a07da243beeaeac8c305cf5, type: 3}
+  Metroid: {fileID: 4384890098338158190, guid: b3e7f54e64520734bb7f6c8609d43c7f, type: 3}
+  Bomb: {fileID: 4384890098338158190, guid: af364890f27d680448a38404c06d4638, type: 3}
   parentTransform: {fileID: 992824850}
 --- !u!4 &406602702
 Transform:
@@ -982,7 +988,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -351, y: 226}
+  m_AnchoredPosition: {x: -117, y: 96}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1203960653
@@ -1283,7 +1289,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -352, y: 207.5}
+  m_AnchoredPosition: {x: -120, y: 68}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1897420384
@@ -1306,7 +1312,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 000000
+  m_text: 000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1380,7 +1386,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1897420384}
-    characterCount: 6
+    characterCount: 3
     spriteCount: 0
     spaceCount: 0
     wordCount: 1

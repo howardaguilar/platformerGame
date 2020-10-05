@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8777255152390643149}
   - component: {fileID: 2360195592401554521}
   m_Layer: 0
-  m_Name: Stone
+  m_Name: Metroid 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4fae7b7bde381b44384c5dd1229325d8, type: 2}
+  - {fileID: 2100000, guid: d31b59e32a9420e458d14129eec1700b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

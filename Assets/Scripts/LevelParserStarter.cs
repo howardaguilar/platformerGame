@@ -15,6 +15,10 @@ public class LevelParserStarter : MonoBehaviour
 
     public GameObject Stone;
 
+    public GameObject Metroid;
+
+    public GameObject Bomb;
+
     public Transform parentTransform;
     // Start is called before the first frame update
     void Start()
@@ -54,6 +58,16 @@ public class LevelParserStarter : MonoBehaviour
 
         switch (spot)
         {
+            case 'B':
+                Debug.Log("Bomb");
+                //Debug.Log(positionToSpawn);
+                ToSpawn = GameObject.Instantiate(Bomb, positionToSpawn, transform.rotation);
+                break;
+            case 'g':
+                Debug.Log("Metroid");
+                //Debug.Log(positionToSpawn);
+                ToSpawn = GameObject.Instantiate(Metroid, positionToSpawn, transform.rotation);
+                break;
             case 'b': Debug.Log("Spawn Brick");
                 //Debug.Log(positionToSpawn);
                 ToSpawn = GameObject.Instantiate(Brick, positionToSpawn, transform.rotation);

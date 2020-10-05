@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class playerEvents : MonoBehaviour
 {
-    public Display message;
+    //public Display message;
     // Start is called before the first frame update
     void Start()
     {
-        message = GameObject.Find("Display").GetComponent<Display>();
+        //message = GameObject.Find("Display").GetComponent<Display>();
     }
 
     // Update is called once per frame
@@ -18,6 +18,7 @@ public class playerEvents : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        /*
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         RaycastHit hit;
@@ -26,13 +27,14 @@ public class playerEvents : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 100.0f) && hit.transform.gameObject != null)
             {
                 GameObject.Destroy(hit.transform.gameObject);
+                message.updatePoint();
             }
         }
         else if (gameObject.name == "QuestionBox(Clone)")
         {
             message.updateCoin();
         }
-        
+        */
 
         // Works but not using physics
         /*if (gameObject.name == "Brick(Clone)")
@@ -43,6 +45,7 @@ public class playerEvents : MonoBehaviour
         {
             Debug.Log("INCREASE COINS\n");
         }*/
-
+        
     }
+    
 }
